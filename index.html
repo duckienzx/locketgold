@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locket Gold - Nâng Cấp Tự Động 24/7</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            locket: {
+              50: '#fffbeb',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              gold: '#FFC400',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes pulse-subtle {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.02); opacity: 0.95; }
+    }
+    @keyframes glow-drift {
+      from { transform: translate3d(-12px, -8px, 0) scale(0.96); }
+      to { transform: translate3d(18px, 14px, 0) scale(1.06); }
+    }
+    .ambient-glow {
+      animation: glow-drift 20s ease-in-out infinite alternate;
+    }
+    .ambient-glow-slower {
+      animation-duration: 27s;
+      animation-direction: alternate-reverse;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ambient-glow { animation: none; }
+    }
+    .animate-pulse-subtle {
+      animation: pulse-subtle 3s infinite ease-in-out;
+    }
+    html, body {
+      overflow-x: hidden;
+    }
+    body.modal-open {
+      overflow: hidden;
+    }
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body class="isolate bg-[#0b0a09] text-slate-100 min-h-screen font-sans antialiased selection:bg-amber-500 selection:text-black flex flex-col justify-between overflow-x-hidden">
+
+  <!-- Background Golden Glow FX -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div class="ambient-glow absolute -top-40 -left-40 w-[420px] h-[420px] bg-amber-500/25 rounded-full blur-[120px]"></div>
+    <div class="ambient-glow ambient-glow-slower absolute top-1/3 -right-40 w-[420px] h-[420px] bg-yellow-500/22 rounded-full blur-[120px]"></div>
+    <div class="ambient-glow absolute -bottom-40 left-1/3 w-[380px] h-[380px] bg-orange-500/16 rounded-full blur-[110px]"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="border-b border-amber-500/10 bg-[#0b0a09]/80 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="./locket.webp" alt="Locket Gold Logo" class="w-10 h-10 rounded-xl object-cover shadow-lg shadow-amber-500/25 border border-amber-500/20" />
+        <span class="font-extrabold text-xl tracking-tight text-white">
+          Locket <span class="bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent">Gold</span>
+        </span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          Hệ thống trực tuyến 24/7
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full max-w-4xl mx-auto px-3 sm:px-4 py-8 sm:py-12 flex-1 flex flex-col justify-center">
+    <!-- Hero Title Section -->
+    <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+      <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/25 mb-4 inline-block shadow-sm">
+        Nâng cấp chính hãng trên iOS
+      </span>
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
+        Nâng Cấp <span class="bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-400 bg-clip-text text-transparent">Locket Gold</span> 1 Năm (iOS)
+      </h1>
+    </div>
+
+    <!-- Product Card -->
+    <div class="bg-zinc-900/70 border border-amber-500/20 rounded-3xl p-4 sm:p-6 md:p-8 backdrop-blur-xl shadow-2xl relative overflow-hidden">
+      <div class="absolute -right-16 -top-16 w-56 h-56 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6 md:gap-8 items-start md:items-center">
+        <!-- Left Column: Product Specs -->
+        <div class="md:col-span-7 space-y-5 sm:space-y-6 min-w-0">
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
+              Gói Bán Chạy Nhất
+            </span>
+            <span class="text-xs text-zinc-400 flex items-center gap-1">
+              <i class="fa-solid fa-bolt text-amber-400"></i> Kích hoạt tức thì
+            </span>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold text-white mb-2">Gói Nâng Cấp Locket Gold 1 Năm (iOS)</h2>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+              Mở khóa toàn bộ tính năng cao cấp của Locket Gold
+            </p>
+          </div>
+
+          <!-- Feature Checkmarks -->
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sm text-zinc-200">
+              <div class="w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 shrink-0 text-xs">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span>Quay video <strong>30 giây có tiếng</strong></span>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-zinc-200">
+              <div class="w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 shrink-0 text-xs">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span>Upload video <strong>10 giây có tiếng</strong> với nhiều loại ghi chú</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-zinc-200">
+              <div class="w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 shrink-0 text-xs">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span>Không quảng cáo & bảo hành <strong>1 năm</strong></span>
+            </li>
+          </ul>
+
+          <div class="pt-2 flex items-center gap-2 text-xs text-zinc-400">
+            <i class="fa-solid fa-shield-halved text-amber-400"></i>
+            Thanh toán an toàn
+          </div>
+        </div>  
+
+        <!-- Right Column: Price & Golden CTA Box -->
+        <div class="md:col-span-5 bg-zinc-950/90 border border-amber-500/20 rounded-2xl p-4 sm:p-5 md:p-6 text-center shadow-inner flex flex-col justify-between w-full min-w-0">
+          <div>
+            <div class="text-xs uppercase font-semibold text-zinc-400 mb-1">Giá ưu đãi hôm nay</div>
+            <div class="flex items-baseline justify-center gap-2 mb-2">
+              <span class="text-4xl font-extrabold text-white">40.000</span>
+              <span class="text-zinc-400 text-sm font-semibold">VNĐ</span>
+            </div>
+          </div>
+
+          <div class="my-6 border-t border-dashed border-zinc-800"></div>
+
+          <div class="space-y-3">
+            <button id="btnOpenPayment" onclick="openPaymentModal()" class="w-full py-3.5 px-6 rounded-xl font-extrabold text-zinc-950 bg-gradient-to-r from-yellow-400 via-amber-400 to-amber-500 hover:from-yellow-300 hover:to-amber-400 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-qrcode text-base"></i>
+              <span>Thanh Toán Ngay</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Payment Modal -->
+  <div id="paymentModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-sm hidden transition-opacity duration-300">
+    <div class="bg-zinc-900 border border-amber-500/30 rounded-3xl w-[min(92vw,28rem)] max-h-[92vh] overflow-hidden shadow-2xl relative">
+      <!-- Modal Header -->
+      <div class="p-5 border-b border-zinc-800 flex items-center justify-between bg-zinc-800/40">
+        <div class="flex items-center gap-2.5">
+          <img src="./locket.webp" alt="Locket Gold Logo" class="w-8 h-8 rounded-lg object-cover border border-amber-500/20" />
+          <h3 class="font-bold text-white">Kích Hoạt Locket Gold</h3>
+        </div>
+        <button onclick="closePaymentModal()" class="text-zinc-400 hover:text-white transition-colors w-8 h-8 rounded-lg flex items-center justify-center hover:bg-zinc-800">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- QR Checkout View -->
+      <div id="checkoutView" class="p-4 sm:p-6 space-y-5 overflow-y-auto max-h-[calc(92vh-80px)]">
+        <!-- Timer -->
+        <div class="flex items-center justify-between text-xs px-3.5 py-2 rounded-xl bg-zinc-800/90 border border-zinc-700/60 text-zinc-300">
+          <span class="flex items-center gap-1.5">
+            <i class="fa-regular fa-clock text-amber-400"></i> Thời gian giữ đơn:
+          </span>
+          <span id="countdownTimer" class="font-mono font-bold text-amber-400 text-sm">15:00</span>
+        </div>
+
+        <!-- VietQR Display -->
+        <div class="flex flex-col items-center">
+          <div class="p-3 bg-white rounded-2xl shadow-xl shadow-amber-500/10 relative border-2 border-amber-400">
+            <img id="qrImage" src="" alt="SePay VietQR" class="w-52 h-52 object-contain rounded-lg">
+            <div id="qrLoading" class="absolute inset-0 bg-white/95 flex flex-col items-center justify-center rounded-2xl gap-2">
+              <i class="fa-solid fa-circle-notch fa-spin text-amber-500 text-2xl"></i>
+              <span class="text-xs text-zinc-700 font-semibold">Đang tạo mã VietQR...</span>
+            </div>
+          </div>
+          <p class="text-xs text-zinc-400 mt-2.5 text-center">
+            Mở App Ngân hàng bất kỳ để quét mã VietQR
+          </p>
+        </div>
+
+        <!-- Transfer Information Details -->
+        <div class="space-y-2 text-xs">
+          <!-- Bank -->
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-zinc-800/60 border border-zinc-700/50">
+            <span class="text-zinc-400">Ngân hàng thụ hưởng</span>
+            <span class="font-bold text-white">BIDV</span>
+          </div>
+
+          <!-- Account Number (VA) -->
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-zinc-800/60 border border-zinc-700/50">
+            <span class="text-zinc-400">Số tài khoản (VA)</span>
+            <div class="flex items-center gap-2">
+              <span id="txtAccount" class="font-mono font-bold text-amber-400">96247KWWGO</span>
+              <button onclick="copyField('txtAccount')" class="text-zinc-300 hover:text-white px-2 py-0.5 rounded bg-zinc-700 hover:bg-zinc-600 transition" title="Sao chép">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Amount -->
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-zinc-800/60 border border-zinc-700/50">
+            <span class="text-zinc-400">Số tiền thanh toán</span>
+            <div class="flex items-center gap-2">
+              <span id="txtAmount" class="font-mono font-bold text-emerald-400">40,000 đ</span>
+              <button onclick="copyValue('40000')" class="text-zinc-300 hover:text-white px-2 py-0.5 rounded bg-zinc-700 hover:bg-zinc-600 transition" title="Sao chép">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Content / Memo -->
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30">
+            <span class="text-amber-300 font-medium">Nội dung chuyển khoản</span>
+            <div class="flex items-center gap-2">
+              <span id="txtOrderCode" class="font-mono font-bold text-amber-300">...</span>
+              <button onclick="copyField('txtOrderCode')" class="text-amber-200 hover:text-white px-2 py-0.5 rounded bg-amber-500/30 hover:bg-amber-500/50 transition" title="Sao chép">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Waiting Status -->
+        <div class="flex items-center justify-center gap-2 text-xs text-amber-400 py-1 font-medium">
+          <i class="fa-solid fa-spinner fa-spin"></i>
+          <span>Đang chờ xác nhận thanh toán từ SePay...</span>
+        </div>
+
+        <!-- Quick Test Button -->
+        <div class="pt-2 border-t border-zinc-800 flex items-center justify-between">
+          <span class="text-[11px] text-zinc-500">Chế độ xem trước luồng tải:</span>
+          <button onclick="simulateSuccessPayment()" class="text-[11px] text-amber-400 hover:text-amber-300 font-semibold hover:underline">
+            [Mô phỏng thanh toán thành công]
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-zinc-800 text-white border border-amber-500/40 px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <i class="fa-solid fa-circle-check text-amber-400"></i>
+    <span id="toastMessage" class="text-xs font-medium">Đã sao chép vào bộ nhớ tạm!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-zinc-900 bg-[#070706] py-6 text-center text-xs text-zinc-500">
+    <p>© 2026 Locket Gold Upgrade. Tự động hóa thanh toán bảo mật với SePay VietQR.</p>
+  </footer>
+
+  <script>
+    // =====================================================
+    // CẤU HÌNH SEPAY & LINK GOOGLE APPS SCRIPT
+    // =====================================================
+    const CONFIG = {
+      bank: 'BIDV',
+      accountNo: '96247KWWGO',
+      amount: 40000,
+      guideUrl: './install-guide.html', // Trang hướng dẫn khi thanh toán thành công
+      webhookBackendUrl: 'https://script.google.com/macros/s/AKfycbwvPYpnnS8q2i8AkpB9aLnpFnLHkZvwJLHbKTehjT60UZO5xf-BbWFGiDeq__UUj3O8Ng/exec', // Link Apps Script của bạn[cite: 7]
+      pollingIntervalMs: 3000
+    };
+
+    let currentOrderId = '';
+    let pollingTimer = null;
+    let countdownInterval = null;
+    let secondsLeft = 900;
+
+    function generateOrderId() {
+      return 'LCKT' + Math.floor(1000 + Math.random() * 9000);
+    }
+
+    function openPaymentModal() {
+      currentOrderId = generateOrderId();
+      document.getElementById('txtOrderCode').innerText = currentOrderId;
+      document.getElementById('txtAmount').innerText = CONFIG.amount.toLocaleString('vi-VN') + ' đ';
+      document.body.classList.add('modal-open');
+
+      const qrUrl = `https://qr.sepay.vn/img?bank=${CONFIG.bank}&acc=${CONFIG.accountNo}&template=compact&amount=${CONFIG.amount}&des=${currentOrderId}`;
+      
+      const qrImg = document.getElementById('qrImage');
+      const qrLoading = document.getElementById('qrLoading');
+      
+      qrLoading.style.display = 'flex';
+      qrImg.onload = () => { qrLoading.style.display = 'none'; };
+      qrImg.src = qrUrl;
+
+      document.getElementById('paymentModal').classList.remove('hidden');
+
+      startCountdown();
+      startPaymentCheck();
+    }
+
+    function closePaymentModal() {
+      document.getElementById('paymentModal').classList.add('hidden');
+      document.body.classList.remove('modal-open');
+      clearInterval(pollingTimer);
+      clearInterval(countdownInterval);
+    }
+
+    function startCountdown() {
+      clearInterval(countdownInterval);
+      secondsLeft = 900;
+      const timerDisplay = document.getElementById('countdownTimer');
+
+      countdownInterval = setInterval(() => {
+        secondsLeft--;
+        if (secondsLeft <= 0) {
+          clearInterval(countdownInterval);
+          closePaymentModal();
+          showToast('Đơn hàng đã hết thời gian chờ!');
+          return;
+        }
+        const m = Math.floor(secondsLeft / 60).toString().padStart(2, '0');
+        const s = (secondsLeft % 60).toString().padStart(2, '0');
+        timerDisplay.innerText = `${m}:${s}`;
+      }, 1000);
+    }
+
+    function startPaymentCheck() {
+      clearInterval(pollingTimer);
+      if (!CONFIG.webhookBackendUrl) return;
+
+      pollingTimer = setInterval(async () => {
+        try {
+          const res = await fetch(`${CONFIG.webhookBackendUrl}?orderId=${currentOrderId}`);
+          const data = await res.json();
+          if (data && data.paid) {
+            handlePaymentSuccess();
+          }
+        } catch (err) {
+          console.warn('Đang kiểm tra giao dịch...', err);
+        }
+      }, CONFIG.pollingIntervalMs);
+    }
+
+    // Khi thanh toán thành công -> Tự động chuyển hướng sang trang hướng dẫn (install-guide.html)
+    function handlePaymentSuccess() {
+      clearInterval(pollingTimer);
+      clearInterval(countdownInterval);
+
+      showToast('🎉 Thanh toán thành công! Đang chuyển sang trang hướng dẫn...');
+
+      setTimeout(() => {
+        window.location.href = CONFIG.guideUrl;
+      }, 1000);
+    }
+
+    function simulateSuccessPayment() {
+      handlePaymentSuccess();
+    }
+
+    function copyField(elementId) {
+      const text = document.getElementById(elementId).innerText;
+      copyValue(text);
+    }
+
+    function copyValue(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      showToast(`Đã sao chép: ${text}`);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastMessage').innerText = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
