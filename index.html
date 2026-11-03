@@ -32,56 +32,152 @@
         <span class="font-extrabold text-xl text-white">Locket <span class="text-amber-400">Gold</span></span>
       </div>
       <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Trực tuyến 24/7
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Hệ thống tự động 24/7
       </span>
     </div>
   </header>
 
   <!-- Main Content -->
   <main class="w-full max-w-4xl mx-auto px-4 py-8 flex-1 flex flex-col justify-center">
+    
+    <!-- Tiêu đề quảng cáo -->
     <div class="text-center max-w-2xl mx-auto mb-8">
-      <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4">
-        Nâng Cấp <span class="text-amber-400">Locket Gold</span> 1 Năm (iOS)
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-4 shadow-sm">
+        <i class="fa-solid fa-bolt"></i> NÂNG CẤP CHÍNH HÃNG - SIÊU NHANH
+      </div>
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
+        Mở Khóa <span class="text-amber-400">Locket Gold</span> Không Giới Hạn
       </h1>
+      <p class="text-zinc-400 text-sm md:text-base">
+        Trải nghiệm toàn bộ tính năng cao cấp, quay video dài mượt mà, bảo hành uy tín suốt thời gian sử dụng.
+      </p>
     </div>
 
+    <!-- Khung chính -->
     <div class="bg-zinc-900/70 border border-amber-500/20 rounded-3xl p-6 md:p-8 backdrop-blur-xl shadow-2xl">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
         
-        <!-- Cột trái: Nhập thông tin & tính năng -->
-        <div class="md:col-span-7 space-y-5">
+        <!-- Cột trái: Nhập thông tin & tính năng quảng cáo -->
+        <div class="md:col-span-7 space-y-6">
           <div>
-            <h2 class="text-xl font-bold text-white mb-2">Nhập thông tin tài khoản của bạn</h2>
-            <p class="text-xs text-zinc-400 mb-4">Vui lòng điền chính xác Username hoặc Link Locket để hệ thống ghi nhận:</p>
+            <h2 class="text-xl font-bold text-white mb-1">Thông tin tài khoản nhận nâng cấp</h2>
+            <p class="text-xs text-zinc-400 mb-3">Nhập chính xác Username hoặc Link Locket để hệ thống ghi nhận:</p>
             
-            <!-- Ô nhập Username Locket -->
-            <div class="space-y-1.5">
+            <div class="space-y-2">
               <label class="block text-xs font-semibold text-amber-300">Username hoặc Link Locket của bạn *</label>
-              <input type="text" id="inputUsername" placeholder="Ví dụ: @username hoặc link locket" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-700 text-white text-sm focus:outline-none focus:border-amber-400 transition" />
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-zinc-500">
+                  <i class="fa-solid fa-at"></i>
+                </span>
+                <input type="text" id="inputUsername" placeholder="Ví dụ: @username_locket" class="w-full pl-10 pr-4 py-3.5 rounded-xl bg-zinc-950 border border-zinc-700 text-white text-sm focus:outline-none focus:border-amber-400 transition shadow-inner" />
+              </div>
+            </div>
+
+            <!-- Nút hướng dẫn lấy link nằm ngay dưới ô nhập -->
+            <div class="mt-2 text-right">
+              <button onclick="openGuideModal()" class="text-xs text-amber-400 hover:text-amber-300 font-medium inline-flex items-center gap-1 transition">
+                <i class="fa-solid fa-circle-question"></i> Không biết lấy link? Ấn vào đây
+              </button>
             </div>
           </div>
 
-          <ul class="space-y-2 text-sm text-zinc-300">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Quay video 30 giây có tiếng</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Bảo hành chính hãng 1 năm</li>
-          </ul>
+          <!-- Các điểm nhấn quảng cáo tính năng -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div class="p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/80 flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-video text-xs"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-white">Video 30 Giây</div>
+                <div class="text-[11px] text-zinc-400">Thoải mái quay video kèm âm thanh</div>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/80 flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-shield-halved text-xs"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-white">Bảo Hành 1 Năm</div>
+                <div class="text-[11px] text-zinc-400">Hỗ trợ nhanh chóng 24/7</div>
+              </div>
+            </div>
+          </div>
         </div>  
 
-        <!-- Cột phải: Giá và nút bấm -->
-        <div class="md:col-span-5 bg-zinc-950/90 border border-amber-500/20 rounded-2xl p-6 text-center">
-          <div class="text-xs uppercase font-semibold text-zinc-400 mb-1">Giá ưu đãi</div>
+        <!-- Cột phải: Giá và nút thanh toán -->
+        <div class="md:col-span-5 bg-zinc-950/90 border border-amber-500/20 rounded-2xl p-6 text-center shadow-xl">
+          <div class="inline-block px-3 py-1 rounded-full bg-amber-400/10 text-amber-400 text-xs font-bold mb-3">
+          </div>
+          <div class="text-xs uppercase font-semibold text-zinc-400 mb-1"></div>
           <div class="flex items-baseline justify-center gap-1 mb-6">
             <span class="text-4xl font-extrabold text-white">40.000</span>
             <span class="text-zinc-400 text-sm font-semibold">VNĐ</span>
           </div>
 
-          <button onclick="openPaymentModal()" class="w-full py-3.5 px-6 rounded-xl font-extrabold text-zinc-950 bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-300 transition shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2">
-            <i class="fa-solid fa-qrcode"></i> Thanh Toán Ngay
+          <button onclick="openPaymentModal()" class="w-full py-4 px-6 rounded-xl font-extrabold text-zinc-950 bg-gradient-to-r from-yellow-400 via-amber-400 to-amber-500 hover:opacity-95 transition shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2 text-sm tracking-wide">
+            <i class="fa-solid fa-qrcode text-base"></i> Thanh Toán Tự Động
           </button>
+          
+          <p class="text-[11px] text-zinc-500 mt-3">
+            <i class="fa-solid fa-lock"></i> Hệ thống xác nhận tự động sau vài giây
+          </p>
         </div>
+
       </div>
     </div>
+
+    <!-- Banner quảng cáo phía dưới bổ sung độ uy tín -->
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+      <div class="p-4 rounded-2xl bg-zinc-900/40 border border-zinc-800/50">
+        <div class="text-amber-400 font-bold mb-1"><i class="fa-solid fa-bolt-lightning"></i> Tự Động 100%</div>
+        <div class="text-xs text-zinc-400">Chuyển khoản xong chuyển hướng nhận hướng dẫn ngay lập tức.</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-zinc-900/40 border border-zinc-800/50">
+        <div class="text-amber-400 font-bold mb-1"><i class="fa-solid fa-headset"></i> Hỗ Trợ Tận Tình</div>
+        <div class="text-xs text-zinc-400">Bot Telegram thông báo về máy chủ xử lý mượt mà.</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-zinc-900/40 border border-zinc-800/50">
+        <div class="text-amber-400 font-bold mb-1"><i class="fa-solid fa-star"></i> Uy Tín Hàng Đầu</div>
+        <div class="text-xs text-zinc-400"></div>
+      </div>
+    </div>
+
   </main>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-xs text-zinc-500 border-t border-zinc-900">
+    © Locket Gold Automated System - All rights reserved.
+  </footer>
+
+  <!-- Modal Hướng Dẫn Lấy Link -->
+  <div id="guideModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+    <div class="bg-zinc-900 border border-amber-500/30 rounded-3xl w-[min(92vw,32rem)] overflow-hidden shadow-2xl relative">
+      <div class="p-5 border-b border-zinc-800 flex items-center justify-between bg-zinc-800/40">
+        <h3 class="font-bold text-white text-sm flex items-center gap-2">
+          <i class="fa-solid fa-circle-info text-amber-400"></i> Hướng dẫn cách lấy link Locket
+        </h3>
+        <button onclick="closeGuideModal()" class="text-zinc-400 hover:text-white w-8 h-8 rounded-lg flex items-center justify-center hover:bg-zinc-800">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-4 text-center">
+        <p class="text-xs text-zinc-300 text-left">
+          Vào ứng dụng Locket $\rightarrow$ Vào trang cá nhân $\rightarrow$ Bấm nút chia sẻ hồ sơ để lấy liên kết hoặc copy Username của bạn giống như ảnh mẫu bên dưới:
+        </p>
+        
+        <!-- Ảnh hướng dẫn: Bạn hãy đặt tên file ảnh hướng dẫn của bạn là guide.png và tải lên cùng thư mục GitHub -->
+        <div class="bg-zinc-950 p-2 rounded-2xl border border-zinc-800">
+          <img src="link.jpg" alt="Hướng dẫn lấy link Locket" class="w-full rounded-xl object-contain max-h-[60vh]">
+        </div>
+
+        <button onclick="closeGuideModal()" class="w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs transition">
+          Đã hiểu, quay lại thanh toán
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Payment Modal -->
   <div id="paymentModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
@@ -101,7 +197,7 @@
 
         <div class="flex flex-col items-center">
           <div class="p-3 bg-white rounded-2xl shadow-xl border-2 border-amber-400 relative">
-            <img id="qrImage" src="" alt="QR" class="w-48 h-48 object-contain rounded-lg">
+            <img id="qrImage" alt="QR" class="w-48 h-48 object-contain rounded-lg">
             <div id="qrLoading" class="absolute inset-0 bg-white/95 flex flex-col items-center justify-center rounded-2xl gap-2">
               <i class="fa-solid fa-circle-notch fa-spin text-amber-500 text-xl"></i>
               <span class="text-xs text-zinc-700 font-semibold">Đang tạo mã QR...</span>
@@ -148,10 +244,21 @@
     let currentOrderId = '';
     let pollingTimer = null;
 
-    // Tạo mã LCKT dài hơn (8 ký tự số ngẫu nhiên)
+    // Tạo mã LCKT dài 8 số chống trùng lặp
     function generateOrderId() {
       const randomNum = Math.floor(10000000 + Math.random() * 90000000);
       return 'LCKT' + randomNum;
+    }
+
+    // Điều khiển Modal Hướng Dẫn Lấy Link
+    function openGuideModal() {
+      document.getElementById('guideModal').classList.remove('hidden');
+      document.body.classList.add('modal-open');
+    }
+
+    function closeGuideModal() {
+      document.getElementById('guideModal').classList.add('hidden');
+      document.body.classList.remove('modal-open');
     }
 
     function openPaymentModal() {
@@ -165,9 +272,6 @@
       currentOrderId = generateOrderId();
       document.getElementById('txtOrderCode').innerText = currentOrderId;
       document.body.classList.add('modal-open');
-
-      // Gửi kèm username ngầm qua tham số của QR hoặc lưu tạm
-      sessionStorage.setItem('locket_username', usernameInput);
 
       const qrUrl = `https://qr.sepay.vn/img?bank=${CONFIG.bank}&acc=${CONFIG.accountNo}&template=compact&amount=${CONFIG.amount}&des=${currentOrderId}`;
       
@@ -193,7 +297,6 @@
 
       pollingTimer = setInterval(async () => {
         try {
-          // Gửi kèm orderId và username lên backend để lưu và bắn thông báo Telegram
           const res = await fetch(`${CONFIG.webhookBackendUrl}?orderId=${currentOrderId}&username=${encodeURIComponent(username)}`);
           const data = await res.json();
           if (data && data.paid) {
